@@ -40,6 +40,15 @@ def buildTPOC(tpoc, TPOC_D, verifyLayer, sizeCheck, POC_MPE):
     if 'mm' in tpoc[3]:
         TPOC_D = int(tpoc[3].replace('mm',''))/25.4
 
+    if 'nw' in tpoc[3]:
+        TPOC_D = int(tpoc[3].replace('nw',''))/25.4
+
+    if 'iso' in tpoc[3]:
+        TPOC_D = int(tpoc[3].replace('iso',''))/25.4
+
+    if 'kf' in tpoc[3]:
+        TPOC_D = int(tpoc[3].replace('kf',''))/25.4    
+
     #Checking for verify
     try: 
         if 'v' in tpoc[4].lower():
